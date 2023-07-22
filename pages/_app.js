@@ -1,13 +1,10 @@
 import "../styles/app.css"
+import { ChakraProvider } from '@chakra-ui/react'
 
 export default function App({ Component, pageProps }) {
     return (
-        <div
-            style={{
-                width: "100%"
-            }}
-        >
+        <ChakraProvider>
             <Component {...pageProps} />
-        </div>
+        </ChakraProvider>
     )
   }
