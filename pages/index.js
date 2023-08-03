@@ -5,11 +5,10 @@ import linkedIn from "../public/indexImages/linkedIn.png"
 import gmail from "../public/indexImages/gmail.png"
 import campanile from "../public/indexImages/campanile.png"
 import headShot from "../public/indexImages/head_shot.jpg"
-import rmtcLogo from "../public/indexImages/rmtcLogo.png"
-import pokemonCard from "../public/indexImages/pokemonCard.png"
 import useBreakpoint from 'use-breakpoint'
 import WhatnotSection from "../components/homeComponents/whatnotSection"
 import RateMyTherapyCompanySection from "../components/homeComponents/rmtcSection"
+import ProjectsSection from "../components/homeComponents/projectsSection"
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 }
 
@@ -167,16 +166,10 @@ export default function HomePage() {
         </Flex>
 
         {/* The Experience Section of the Website */}
-
-        {/* Whatnot Section */}
         <WhatnotSection />
-        
         <RateMyTherapyCompanySection />
-        
-        {/* Projects Section */}
-        <Box h={1200} className={styles.sectionFive}>
-            Projects Section
-        </Box>
+        <ProjectsSection />
+
       </div>
     )
   }
