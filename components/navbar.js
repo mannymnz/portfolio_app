@@ -7,6 +7,7 @@ import mainPersonalPic from "../public/indexImages/mainPersonalPic.png"
 import headShot from "../public/indexImages/head_shot.jpg"
 import styles from "./navbar.module.css"
 import useBreakpoint from 'use-breakpoint'
+import FadeIn from 'react-fade-in/lib/FadeIn'
 
 /*
     The basic navbar, contains links to different sections
@@ -18,6 +19,7 @@ export default function Navbar() {
       BREAKPOINTS,
       'desktop'
     )
+
     return (
         <>
             {/* This box is absolutely positioned, to display the background gradient without interrupting flow*/}
@@ -28,6 +30,7 @@ export default function Navbar() {
               width="100vw"
             />
 
+            <FadeIn>
             <Flex justifyContent="center" color="white" fontWeight={600} p={7} fontSize={17}
               className={styles.mainFlexBox}
             >
@@ -41,6 +44,7 @@ export default function Navbar() {
                 {breakpoint === "mobile"? "Abt" : "About Me"}
               </Box>
           </Flex>
+          </FadeIn>
           <Box
             h={5}
           >

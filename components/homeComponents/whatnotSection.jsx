@@ -7,7 +7,7 @@ import pokemonCard from "./images/pokemonCard.png"
 import comicBooks from "./images/comicBooks.png"
 
 import useBreakpoint from 'use-breakpoint'
-
+import BounceInSide from '../animations/bounseInSide'
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 }
 /*
@@ -62,6 +62,7 @@ export default function WhatnotSection() {
                   right: -190
                 }}
               />
+              
               <img
                 className={styles.dropShadow}
                 src={AJ1.src}
@@ -74,7 +75,7 @@ export default function WhatnotSection() {
                   right: -220
                 }}
               />
-
+              
               <img
                 className={styles.dropShadow}
                 src={pokemonCard.src}
@@ -87,7 +88,7 @@ export default function WhatnotSection() {
                   left: -150
                 }}
               />
-
+              
               <img
                 className={styles.dropShadow}
                 src={comicBooks.src}
