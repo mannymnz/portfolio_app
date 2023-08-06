@@ -4,7 +4,7 @@ import github from "../assets/images/github.png"
 import linkedIn from "../assets/images/linkedIn.png"
 import gmail from "../assets/images/gmail.png"
 import campanile from "../assets/images/campanile.png"
-import headShot from "../assets/images/head_shot.jpg"
+import headShot from "../assets/images/headShot.png"
 import useBreakpoint from 'use-breakpoint'
 import WhatnotSection from "../components/homeComponents/whatnotSection"
 import RateMyTherapyCompanySection from "../components/homeComponents/rmtcSection"
