@@ -126,7 +126,7 @@ export default function HomePage() {
                   fontSize={25}
                   fontWeight={400}
                 >
-                  Berkeley EECS '25 • Software Engineer
+                  Berkeley EECS {"'"}25 • Software Engineer
                 </Box>
                 
                 <Box
