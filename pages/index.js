@@ -1,10 +1,10 @@
 import styles from "../styles/index.module.css"
 import { Flex, Box, Link } from '@chakra-ui/react'
-import github from "../public/indexImages/github.png"
-import linkedIn from "../public/indexImages/linkedIn.png"
-import gmail from "../public/indexImages/gmail.png"
-import campanile from "../public/indexImages/campanile.png"
-import headShot from "../public/indexImages/head_shot.jpg"
+import github from "../assets/images/github.png"
+import linkedIn from "../assets/images/linkedIn.png"
+import gmail from "../assets/images/gmail.png"
+import campanile from "../assets/images/campanile.png"
+import headShot from "../assets/images/head_shot.jpg"
 import useBreakpoint from 'use-breakpoint'
 import WhatnotSection from "../components/homeComponents/whatnotSection"
 import RateMyTherapyCompanySection from "../components/homeComponents/rmtcSection"
