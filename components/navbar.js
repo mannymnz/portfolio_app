@@ -1,10 +1,4 @@
 import { Flex, Box } from '@chakra-ui/react'
-import github from "../public/indexImages/github.png"
-import linkedIn from "../public/indexImages/linkedIn.png"
-import gmail from "../public/indexImages/gmail.png"
-import campanile from "../public/indexImages/campanile.png"
-import mainPersonalPic from "../public/indexImages/mainPersonalPic.png"
-import headShot from "../public/indexImages/head_shot.jpg"
 import styles from "./navbar.module.css"
 import useBreakpoint from 'use-breakpoint'
 import FadeIn from 'react-fade-in/lib/FadeIn'
