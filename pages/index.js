@@ -1,5 +1,5 @@
 import styles from "../styles/index.module.css"
-import { Flex, Box } from '@chakra-ui/react'
+import { Flex, Box, Link } from '@chakra-ui/react'
 import github from "../public/indexImages/github.png"
 import linkedIn from "../public/indexImages/linkedIn.png"
 import gmail from "../public/indexImages/gmail.png"
@@ -9,6 +9,10 @@ import useBreakpoint from 'use-breakpoint'
 import WhatnotSection from "../components/homeComponents/whatnotSection"
 import RateMyTherapyCompanySection from "../components/homeComponents/rmtcSection"
 import ProjectsSection from "../components/homeComponents/projectsSection"
+import BounceInSide from "../components/animations/bounseInSide"
+import FadeIn from "react-fade-in/lib/FadeIn"
+import { useAnimate } from "framer-motion"
+import { useEffect } from "react"
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 }
 
@@ -17,9 +21,23 @@ export default function HomePage() {
       BREAKPOINTS,
       'desktop'
     )
+
+    /* Startup Animations */
+    const [linkedInRef, linkedInAnim] = useAnimate()
+    const [gmailRef, gmailAnim] = useAnimate()
+    const [githubRef, githubAnim] = useAnimate()
+    useEffect(() => {
+      linkedInAnim(linkedInRef.current, { rotate: [0, 10]}, {duration: 2, type: "spring", stiffness: 1000}, )
+      githubAnim(githubRef.current, { rotate: [0, -10]}, {duration: 2, type: "spring", stiffness: 1000}, )
+      gmailAnim(gmailRef.current, { rotate: [0, 10]}, {duration: 2, type: "spring", stiffness: 1000}, )
+    })
+
+
     console.log("the current breakpoint: ", breakpoint)
+
     return (
       <div>
+        <div id="pageTop"/> {/* Anchor */}
         <Box className={styles.spacer} h={breakpoint == "desktop" || breakpoint == "tablet" ? 150 : 10}/>
         
         <Flex justify="center" pr={breakpoint=="desktop"? 150 : null}>
@@ -52,9 +70,9 @@ export default function HomePage() {
                 
                 <img
                   src={linkedIn.src}
+                  ref={linkedInRef}
                   alt="linkedin"
                   style={{
-                    transform: "rotate(-10deg)",
                     width: "58px !important",
                     "max-width": "none",
                   }}
@@ -63,6 +81,7 @@ export default function HomePage() {
                 <Box className={styles.spacer} h={5}/>
                 <img
                   src={github.src}
+                  ref={githubRef}
                   alt="github"
                   width={58}
                   display="inline-block"
@@ -74,6 +93,7 @@ export default function HomePage() {
                 <Box classname={styles.spacer} h={5}/>
                 <img
                   src={gmail.src}
+                  ref={gmailRef}
                   alt="gmail"
                   width={58}
                   display="inline-block"
@@ -87,6 +107,7 @@ export default function HomePage() {
               <Box className={styles.spacer} w={8}/>
 
               <Box>
+                <FadeIn>
                 <Box
                   fontSize={22}
                   fontWeight={400}
@@ -107,9 +128,9 @@ export default function HomePage() {
                 >
                   Berkeley EECS '25 • Software Engineer
                 </Box>
-
+                
                 <Box
-                  className={styles.viewMyResumeButton}
+                  className="grow-on-hover basicBoxShadow"
                   display="inline-block"
                   backgroundColor="#3AB1C1"
                   color="white"
@@ -118,9 +139,6 @@ export default function HomePage() {
                   borderRadius={10}
                   onClick={() => alert("hello")}
                   margin="10px 0px 10px 0px"
-                  style={{
-                    "box-shadow": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                  }}
                 >
                   View My Resume
                 </Box>
@@ -133,12 +151,14 @@ export default function HomePage() {
                 >
                   Full Stack Development • Python • JS • React • Flask • GraphQL • NoSQL • SQL • Leadership • Team Player
                 </Box>
+                </FadeIn>
               </Box>
             </Flex>
 
             { breakpoint === "desktop" && (
+            <BounceInSide viewThreshold={0.4} startX={-400} duration={2}>
             <Box
-              className={styles.imagesContainer}
+              className="darkestBoxShadow"
               backgroundColor="gray.300"
               borderRadius={10}
               ml="25px"
@@ -159,8 +179,8 @@ export default function HomePage() {
                   "max-width": "none",
                 }}
               />
-
             </Box>
+            </BounceInSide>
             )}
 
         </Flex>
@@ -169,7 +189,6 @@ export default function HomePage() {
         <WhatnotSection />
         <RateMyTherapyCompanySection />
         <ProjectsSection />
-
       </div>
     )
   }

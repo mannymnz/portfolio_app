@@ -7,7 +7,7 @@ import pokemonCard from "./images/pokemonCard.png"
 import comicBooks from "./images/comicBooks.png"
 
 import useBreakpoint from 'use-breakpoint'
-
+import BounceInSide from '../animations/bounseInSide'
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 }
 /*
@@ -24,10 +24,12 @@ export default function WhatnotSection() {
 
         <Box h={370}></Box> {/* Spacer */}
         
+        <div id="experiencesSection" /> {/* Anchor */}
+
         <Flex justify="center" position="relative"> {/* The actual box itself */}
 
         <Box
-          className={styles.boxShadow}
+          className="darkestBoxShadow"
           backgroundColor="black"
           color="white"
           m={30}
@@ -58,10 +60,11 @@ export default function WhatnotSection() {
                   transform: "rotate(-10deg)",
                   width: 180,
                   position: "absolute",
-                  top: -70,
+                  top: -30,
                   right: -190
                 }}
               />
+              
               <img
                 className={styles.dropShadow}
                 src={AJ1.src}
@@ -70,11 +73,11 @@ export default function WhatnotSection() {
                   transform: "rotate(10deg)",
                   width: 190,
                   position: "absolute",
-                  bottom: -90,
+                  bottom: -40,
                   right: -220
                 }}
               />
-
+              
               <img
                 className={styles.dropShadow}
                 src={pokemonCard.src}
@@ -83,11 +86,11 @@ export default function WhatnotSection() {
                   transform: "rotate(10deg)",
                   width: 90,
                   position: "absolute",
-                  bottom: -35,
+                  bottom: 0,
                   left: -150
                 }}
               />
-
+              
               <img
                 className={styles.dropShadow}
                 src={comicBooks.src}
@@ -96,16 +99,17 @@ export default function WhatnotSection() {
                   transform: "rotate(-10deg)",
                   width: 220,
                   position: "absolute",
-                  top: -40,
+                  top: -10,
                   left: -240
                 }}
               />
             </>
           )}
 
-          <Box p={8} fontWeight={700} fontSize={17}>Software Engineer Intern • Whatnot {"(W20)"} </Box>
+          <Box p={8} pb={0} fontSize={24} fontWeight={900}>Whatnot {"(W20)"} </Box>
+          <Box p={8} pt={0} fontSize={20} fontWeight={400}>Software Engineer Intern</Box>
 
-          <Box pl={10} w="90%" fontSize={14} fontWeight={500} pb={10}> {/* The main content of the seciton*/}
+          <Box pl={10} w="90%" fontSize={16} fontWeight={500} pb={10}> {/* The main content of the seciton*/}
             <Box fontWeight={900}>Overview</Box>
             <Box mb={3}>Worked at a fast-paced startup as part of their discovery team, aiming to maximize user experience through search and browse.</Box>
             <Box mb={3}>Led engineering of a project to implement saved searching on the platform.</Box>
