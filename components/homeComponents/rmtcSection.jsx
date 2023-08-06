@@ -16,10 +16,9 @@ export default function RateMyTherapyCompanySection() {
     )
     return (
         <Box className={styles.sectionThree}>
-            <Box h={700}></Box> {/* Spacer */}
             <Flex justify="center">
             <Box
-                className={styles.boxShadow}
+                className="darkestBoxShadow"
                 backgroundColor="black"
                 color="white"
                 m={30}
@@ -92,9 +91,10 @@ export default function RateMyTherapyCompanySection() {
                   </>
                 )}
 
-                <Box p={8} fontWeight={700} fontSize={17}> CoFounder & lead Engineer • RateMyTherapyCompany </Box>
+                <Box p={8}  pb={0} fontSize={24} fontWeight={900}> RateMyTherapyCompany</Box>
+                <Box p={8} pt={0} fontSize={20} fontWeight={400}> CoFounder & lead Engineer</Box>
 
-                <Box pl={10} w="90%" fontSize={14} fontWeight={500} pb={10}> {/* The main content of the seciton*/}
+                <Box pl={10} w="90%" fontSize={16} fontWeight={500} pb={10}> {/* The main content of the seciton*/}
                     <Box fontWeight={900}>Overview</Box>
                     <Box mb={3}> Cofounded and led development of RateMyTherapyCompany, aiming to help traveling healthcare specialists find and review contractural Jobs. Currently serving 60+ daily active users</Box>
                     <Box fontWeight={800}>What I did</Box>

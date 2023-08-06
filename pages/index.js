@@ -1,5 +1,5 @@
 import styles from "../styles/index.module.css"
-import { Flex, Box } from '@chakra-ui/react'
+import { Flex, Box, Link } from '@chakra-ui/react'
 import github from "../public/indexImages/github.png"
 import linkedIn from "../public/indexImages/linkedIn.png"
 import gmail from "../public/indexImages/gmail.png"
@@ -34,8 +34,10 @@ export default function HomePage() {
 
 
     console.log("the current breakpoint: ", breakpoint)
+
     return (
       <div>
+        <div id="pageTop"/> {/* Anchor */}
         <Box className={styles.spacer} h={breakpoint == "desktop" || breakpoint == "tablet" ? 150 : 10}/>
         
         <Flex justify="center" pr={breakpoint=="desktop"? 150 : null}>
@@ -128,7 +130,7 @@ export default function HomePage() {
                 </Box>
                 
                 <Box
-                  className={styles.viewMyResumeButton}
+                  className="grow-on-hover basicBoxShadow"
                   display="inline-block"
                   backgroundColor="#3AB1C1"
                   color="white"
@@ -137,9 +139,6 @@ export default function HomePage() {
                   borderRadius={10}
                   onClick={() => alert("hello")}
                   margin="10px 0px 10px 0px"
-                  style={{
-                    "box-shadow": "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                  }}
                 >
                   View My Resume
                 </Box>
@@ -159,7 +158,7 @@ export default function HomePage() {
             { breakpoint === "desktop" && (
             <BounceInSide viewThreshold={0.4} startX={-400} duration={2}>
             <Box
-              className={styles.imagesContainer}
+              className="darkestBoxShadow"
               backgroundColor="gray.300"
               borderRadius={10}
               ml="25px"
@@ -190,7 +189,6 @@ export default function HomePage() {
         <WhatnotSection />
         <RateMyTherapyCompanySection />
         <ProjectsSection />
-
       </div>
     )
   }
