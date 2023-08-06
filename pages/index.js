@@ -112,7 +112,7 @@ export default function HomePage() {
                   fontSize={22}
                   fontWeight={400}
                 >
-                  Hello, I'm,
+                  Hello, I{"'"}m
                 </Box>
                 <Box
                   fontSize={50}
