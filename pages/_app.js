@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
                 <meta property="og:title" content="Manuel Munoz" key="title"/>
                 <link rel="icon" href='/oskiHead.png'></link>
             </Head>
+            <div id="pageTop"/> {/* Anchor */}
             <Navbar />
             <Component {...pageProps} />
         </ChakraProvider>

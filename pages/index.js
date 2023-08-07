@@ -38,7 +38,6 @@ export default function HomePage() {
 
     return (
       <div>
-        <div id="pageTop"/> {/* Anchor */}
         <Box className={styles.spacer} h={breakpoint == "desktop" || breakpoint == "tablet" ? 150 : 10}/>
         
         <Flex justify="center" pr={breakpoint=="desktop"? 150 : null}>

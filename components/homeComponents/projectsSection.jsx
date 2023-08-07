@@ -17,6 +17,9 @@ export default function ProjectsSection() {
         <Box className={styles.sectionFive}>
           
             <div id="projectsSection" /> {/* Anchor */}
+
+            <Box h={100}></Box> {/* Spacer */}
+
             <Box align="center"> {/* title container */}
               <Box
                 className="darkestBoxShadow"

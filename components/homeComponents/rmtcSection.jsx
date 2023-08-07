@@ -115,7 +115,7 @@ export default function RateMyTherapyCompanySection() {
 
             </Flex>
 
-            <Box h={400}></Box> {/* Spacer */}
+            <Box h={350}></Box> {/* Spacer */}
         </Box>
     )
 }

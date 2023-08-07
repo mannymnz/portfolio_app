@@ -22,9 +22,11 @@ export default function WhatnotSection() {
     return (
         <Box className={styles.sectionTwo} style={{position: "relative"}}>
 
-        <Box h={370}></Box> {/* Spacer */}
+        <Box h={270}></Box> {/* Spacer */}
         
         <div id="experiencesSection" /> {/* Anchor */}
+
+        <Box h={100}></Box> {/* Spacer */}
 
         <Flex justify="center" position="relative"> {/* The actual box itself */}
 
