@@ -4,8 +4,15 @@ import studyBear from "./images/studyBear.png"
 import monkeytype from "./images/monkeytype.png"
 import studyBearSS from "./images/studyBearSS.png"
 import typingGame from "./images/typingGame.png"
+import useBreakpoint from 'use-breakpoint'
+
+const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 }
 
 export default function ProjectsSection() {
+    const { breakpoint, maxWidth, minWidth } = useBreakpoint(
+      BREAKPOINTS,
+      'desktop'
+    )
     return (
         <Box className={styles.sectionFive}>
           
@@ -18,7 +25,7 @@ export default function ProjectsSection() {
                 backgroundColor="black"
                 alignSelf="center"
                 borderRadius={10}
-                padding={5}
+                padding={5} pl={4} pr={4}
                 fontSize={20}
                 fontWeight={800}
               >
@@ -29,26 +36,31 @@ export default function ProjectsSection() {
             <Box h={50}></Box> {/* Spacer */}
 
             <Flex
+              direction={ breakpoint === "mobile" ? "column" : "row"}
               justify="center"
-              pl={10}
-              pr={10}  
+              alignItems={ breakpoint === "mobile" ? "center" : null} 
+              /*
+                SideNode about flex boxes:
+                  justify/justifyContent aligns along the main axis (specified by direction)
+                  alignItems aligns along the cross axis (perpendicular to the main axis)
+              */
             > {/* Main Content Container */}
 
               {/* StudyBear Container */}
               <Box
                 className="darkestBoxShadow"
-                w={400}
                 bg="black" 
                 borderRadius={10}
                 padding={10}
                 pl={30} pr={30}
+                mb={10}
                 color="white"
                 fontSize={16}
                 fontWeight={500}
                 style={{
                   position: "relative"
                 }}
-                width="40%"  
+                width={ breakpoint === "mobile"? "95%" : "40%"}
               >
                 <img src={studyBear.src} alt="studyBear"
                   style={{
@@ -83,18 +95,18 @@ export default function ProjectsSection() {
               {/* Typing Game Container */}
               <Box
                 className="darkestBoxShadow"
-                w={400}
                 bg="black" 
                 borderRadius={10}
                 padding={10}
-                pl={30} pr={30} 
+                pl={30} pr={30}
+                mb={10}
                 color="white"
                 fontSize={16}
                 fontWeight={500}
                 style={{
                   position: "relative"
                 }}
-                width="40%"  
+                width={ breakpoint === "mobile"? "95%" : "40%"} 
               >
                 <img src={monkeytype.src} alt="monkeytype"
                   style={{
