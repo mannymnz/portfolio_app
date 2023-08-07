@@ -11,6 +11,7 @@ import RateMyTherapyCompanySection from "../components/homeComponents/rmtcSectio
 import ProjectsSection from "../components/homeComponents/projectsSection"
 import BounceInSide from "../components/animations/bounseInSide"
 import FadeIn from "react-fade-in/lib/FadeIn"
+import { useRouter } from 'next/router';
 import { useAnimate } from "framer-motion"
 import { useEffect } from "react"
 
@@ -129,19 +130,23 @@ export default function HomePage() {
                   Berkeley EECS {"'"}25 • Software Engineer
                 </Box>
                 
-                <Box
-                  className="grow-on-hover basicBoxShadow"
-                  display="inline-block"
-                  backgroundColor="#3AB1C1"
-                  color="white"
-                  padding="10px 20px 10px 20px"
-                  fontWeight={500}
-                  borderRadius={10}
-                  onClick={() => alert("hello")}
-                  margin="10px 0px 10px 0px"
+                <a
+                  href="https://drive.google.com/file/d/1Qj0O2N1HAv1P_Ulc7d2pehMMEGPplMzw/view"
+                  target="_blank"
                 >
-                  View My Resume
-                </Box>
+                  <Box
+                    className="grow-on-hover basicBoxShadow"
+                    display="inline-block"
+                    backgroundColor="#3AB1C1"
+                    color="white"
+                    padding="10px 20px 10px 20px"
+                    fontWeight={500}
+                    borderRadius={10}
+                    margin="10px 0px 10px 0px"
+                  >
+                     View My Resume
+                  </Box>
+                </a>
 
                 <Box
                   w="70%"

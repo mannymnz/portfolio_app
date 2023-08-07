@@ -31,7 +31,7 @@ export default function RateMyTherapyCompanySection() {
                 <img src={rmtcLogo.src} alt="rmtc"
                   style={{
                     "max-width": "none",
-                    width: 120,
+                    width: breakpoint === "mobile" ? 60 : 120,
                     position: "absolute",
                     top: 20,
                     right: 25
@@ -89,6 +89,9 @@ export default function RateMyTherapyCompanySection() {
                       }}
                     />
                   </>
+                )}
+                { breakpoint === "mobile" && (
+                  <Box h={12}/> /* Spacer is only needed on mobile*/
                 )}
 
                 <Box p={8}  pb={0} fontSize={24} fontWeight={900}> RateMyTherapyCompany</Box>

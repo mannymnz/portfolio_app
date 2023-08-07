@@ -43,7 +43,7 @@ export default function WhatnotSection() {
           <img src={whatnotLogo.src} alt="whatnot"
           style={{
             "max-width": "none",
-            width: 100,
+            width: (breakpoint === "mobile" ? 60: 100),
             position: "absolute",
             top: 20,
             right: 20
