@@ -127,7 +127,7 @@ export default function WhatnotSection() {
       
         </Flex>
         
-        <Box h={370}></Box> {/* Spacer */}
+        <Box h={200}></Box> {/* Spacer */}
         
       </Box>
     )
