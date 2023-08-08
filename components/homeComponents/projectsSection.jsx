@@ -240,7 +240,7 @@ export default function ProjectsSection() {
                 <Box fontSize={24} fontWeight={900}>{"Build Your Own World (BYOW)"}</Box>
                 <Box as='i'>School Project</Box>
                 <Box h={5}></Box> {/* Spacer */}
-                <Box mb={3}>Top-down style video game created in Java with Princeton's stdDraw library</Box>
+                <Box mb={3}>Top-down style video game created in Java with {"Princeton's"} stdDraw library</Box>
                 <Box mb={3}>Creation of algorithms for random generation of world layout in every play through based on a seed</Box>
                 <Box mb={3}>Algorithms for procedural world generation, creating a constantly evolving experience.</Box>
                 <Box mb={3}>Creation of complex data structues to handle game state and logic</Box>
