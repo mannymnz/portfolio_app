@@ -24,7 +24,7 @@ export default function HomePage() {
       'desktop'
     )
 
-    /* Startup Animations */
+    /* Startup Animations lol */
     const [linkedInRef, linkedInAnim] = useAnimate()
     const [gmailRef, gmailAnim] = useAnimate()
     const [githubRef, githubAnim] = useAnimate()
@@ -83,7 +83,7 @@ export default function HomePage() {
                     />
                 </a>
                 </Box>
-
+                
                 <Box className={styles.spacer} h={5}/>
 
                 <Box>
