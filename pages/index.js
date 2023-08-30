@@ -14,6 +14,7 @@ import FadeIn from "react-fade-in/lib/FadeIn"
 import { useRouter } from 'next/router';
 import { useAnimate } from "framer-motion"
 import { useEffect } from "react"
+import { Popover, Button } from "antd"
 
 const BREAKPOINTS = { mobile: 0, tablet: 768, desktop: 1280 }
 
@@ -71,6 +72,7 @@ export default function HomePage() {
                 <Box>
                   <a href="https://www.linkedin.com/in/manuel-munoz-968582236/" target="_blank">
                     <img
+                      cursor="pointer"
                       src={linkedIn.src}
                       ref={linkedInRef}
                       alt="linkedin"
@@ -87,6 +89,7 @@ export default function HomePage() {
                 <Box>
                   <a href="https://github.com/mannymnz" target="_blank">
                     <img
+                      cursor="pointer"
                       src={github.src}
                       ref={githubRef}
                       alt="github"
@@ -100,17 +103,21 @@ export default function HomePage() {
                   </a>
                 </Box>
                 <Box classname={styles.spacer} h={5}/>
-                <img
-                  src={gmail.src}
-                  ref={gmailRef}
-                  alt="gmail"
-                  width={58}
-                  display="inline-block"
-                  style={{
-                    transform: "rotate(-10deg)",
-                    "max-width": "none",
-                  }}
-                />
+
+                <Popover content={(<Box>mannymnz@berkeley.edu</Box>)} trigger="click">
+                  <img
+                    cursor="pointer"
+                    src={gmail.src}
+                    ref={gmailRef}
+                    alt="gmail"
+                    width={58}
+                    display="inline-block"
+                    style={{
+                      transform: "rotate(-10deg)",
+                      "max-width": "none",
+                    }}
+                  />
+                </Popover>
               </Box>
 
               <Box className={styles.spacer} w={8}/>
