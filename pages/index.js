@@ -68,28 +68,37 @@ export default function HomePage() {
               <Box> {/* Outer center container*/}
                 <Box className={styles.spacer} h={2}/>
                 
-                <img
-                  src={linkedIn.src}
-                  ref={linkedInRef}
-                  alt="linkedin"
-                  style={{
-                    width: "58px !important",
-                    "max-width": "none",
-                  }}
-                />
+                <Box>
+                  <a href="https://www.linkedin.com/in/manuel-munoz-968582236/" target="_blank">
+                    <img
+                      src={linkedIn.src}
+                      ref={linkedInRef}
+                      alt="linkedin"
+                      style={{
+                        width: "58px !important",
+                        "max-width": "none",
+                      }}
+                    />
+                </a>
+                </Box>
 
                 <Box className={styles.spacer} h={5}/>
-                <img
-                  src={github.src}
-                  ref={githubRef}
-                  alt="github"
-                  width={58}
-                  display="inline-block"
-                  style={{
-                    transform: "rotate(10deg)",
-                    "max-width": "none",
-                  }}
-                />
+
+                <Box>
+                  <a href="https://github.com/mannymnz" target="_blank">
+                    <img
+                      src={github.src}
+                      ref={githubRef}
+                      alt="github"
+                      width={58}
+                      display="inline-block"
+                      style={{
+                        transform: "rotate(10deg)",
+                        "max-width": "none",
+                      }}
+                    />
+                  </a>
+                </Box>
                 <Box classname={styles.spacer} h={5}/>
                 <img
                   src={gmail.src}

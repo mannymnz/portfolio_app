@@ -4,5 +4,6 @@
     DO NOT MODIFY THIS FILE
 */
 body {
-    margin: 0px
+    margin: 0px;
+    overflow-x: hidden;
 }
